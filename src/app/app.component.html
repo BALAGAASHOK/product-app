@@ -44,7 +44,7 @@
             <img [src]="product.image" [alt]="product.attributes.Brand" />
           </div>
           <div class="product-content">
-            <div class="product-name">{{product.productName}}</div>
+            <div class="product-name" [title]="product.productName">{{product.productName}}</div>
             <div class="content">
               <div class="left-content">
                 <div class="item">
@@ -185,14 +185,7 @@
               </div>
               <div class="form-row">
                 <label for="">Price</label>
-                <div class="item">
-                  <div class="input-group">
-                    <span class="input-group-addon">
-                      $
-                    </span>
-                    <input type="text" class="" name="price" [(ngModel)]="editdata.productPrice">
-                  </div>
-                </div>
+                <input type="text" class="item" name="price" [(ngModel)]="editdata.productPrice">
               </div>
             </div>
             <div class="end-section">
